@@ -1,0 +1,16 @@
+i.trash-icon {
+  padding-top: 10px;
+  color: indianred;
+}
+
+.editButton {
+  width: 5em;
+}
+
+.deleteButton {
+  width: 5em;
+}
+
+.title5 {
+  font-size: 2em;
+}
