@@ -22,7 +22,7 @@ const Add = () => {
     };
     try {
       const result = await (
-        await fetch('http://localhost:5000/addtomato', {
+        await fetch('/addtomato', {
           method: 'post',
           headers: {
             'Content-Type': 'application/json',

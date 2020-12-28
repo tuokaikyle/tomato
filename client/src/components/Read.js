@@ -18,7 +18,7 @@ const Read = () => {
     e.preventDefault();
     try {
       const result = await (
-        await fetch('http://localhost:5000/deletetomato', {
+        await fetch('/deletetomato', {
           method: 'delete',
           headers: {
             'Content-Type': 'application/json',

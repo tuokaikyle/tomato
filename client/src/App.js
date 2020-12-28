@@ -20,7 +20,7 @@ function App() {
   const getAll = async () => {
     try {
       const result = await (
-        await fetch('http://localhost:5000/all', {
+        await fetch('/all', {
           method: 'get',
           headers: {
             'Content-Type': 'application/json',

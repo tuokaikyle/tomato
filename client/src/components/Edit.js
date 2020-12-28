@@ -36,7 +36,7 @@ const Edit = () => {
     };
     try {
       const result = await (
-        await fetch('http://localhost:5000/edittomato', {
+        await fetch('/edittomato', {
           method: 'put',
           headers: {
             'Content-Type': 'application/json',
