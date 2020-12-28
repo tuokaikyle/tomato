@@ -14,9 +14,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Backend is on...');
-});
+// app.get('/', (req, res) => {
+//   res.send('Backend is on...');
+// });
 
 app.get('/all', async (req, res) => {
   try {
