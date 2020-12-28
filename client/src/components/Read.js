@@ -61,11 +61,10 @@ const Read = () => {
           <div className='title5' style={{ textTransform: 'capitalize' }}>
             {title}
           </div>
-          <div style={{ display: 'flex', marginBlock: '1em' }}>
+          <div style={{ marginBlock: '1em' }}>
             <div
               style={{
                 fontWeight: 'bold',
-                overflow: 'hidden',
               }}
             >
               Group：
@@ -76,7 +75,6 @@ const Read = () => {
             <div
               style={{
                 fontWeight: 'bold',
-                overflow: 'hidden',
               }}
             >
               Due：
@@ -87,7 +85,6 @@ const Read = () => {
             <div
               style={{
                 fontWeight: 'bold',
-                overflow: 'hidden',
               }}
             >
               Description：
@@ -98,7 +95,6 @@ const Read = () => {
             <div
               style={{
                 fontWeight: 'bold',
-                overflow: 'hidden',
               }}
             >
               Done：

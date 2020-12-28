@@ -43,7 +43,7 @@ function App() {
     setThree(tomatoes.filter((i) => i.group === 'Three'));
     setFour(tomatoes.filter((i) => i.group === 'Four'));
   }, [tomatoes]);
-  console.log(state.task);
+  // console.log(state.task);
   return (
     <GeneralContext.Provider value={{ state, dispatch }}>
       <div className='App grey lighten-5'>
