@@ -6,10 +6,10 @@ export const colors = [
 ];
 
 export const groupNames = [
-  { shortName: 'One', fullName: 'Today' },
-  { shortName: 'Two', fullName: 'This week' },
-  { shortName: 'Three', fullName: 'This Month' },
-  { shortName: 'Four', fullName: 'BucketList' },
+  { shortName: 'One', fullName: 'Important and Urgent' },
+  { shortName: 'Two', fullName: 'Less Important but Urgent' },
+  { shortName: 'Three', fullName: 'Important but Not Urgent' },
+  { shortName: 'Four', fullName: 'Less important Not Urgent' },
 ];
 
 export const getGroupName = (shortName) => {

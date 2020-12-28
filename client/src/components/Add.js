@@ -43,9 +43,7 @@ const Add = () => {
       {state ? (
         <div className='row'>
           <form className='col s12' onSubmit={submitHandler}>
-            <div className='input-field title5'>
-              {getGroupName(state.add_to)}
-            </div>
+            <h5>{getGroupName(state.add_to)}</h5>
 
             <div className='input-field'>
               <label htmlFor=''>Title</label>
