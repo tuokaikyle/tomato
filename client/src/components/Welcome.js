@@ -1,9 +1,17 @@
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Welcome = () => {
+  const { user, isAuthenticated } = useAuth0();
   return (
     <div style={{ height: '40em', overflow: 'auto' }}>
-      <div className='title5'>Welcome</div>
+      <div style={{ display: 'flex' }}>
+        <div>{'Welcome,' + '\xa0'}</div>
+        <div style={{ fontWeight: 'bold' }}>
+          {isAuthenticated && user.nickname}
+        </div>
+      </div>
+
       <p>
         This is essentially a todo list app and I prefer to it "Tomato". You can
         add, view, edit and delete your task items.
@@ -41,7 +49,6 @@ const Welcome = () => {
         <li>- Fully responsive and mobile-friendly</li>
         <li>- Drag and drop items</li>
         <li>- Create new card/groups</li>
-        <li>- Signup/login</li>
         <li>- Reminder of near-due/over-due items</li>
       </ul>
       <p>Cheers!</p>

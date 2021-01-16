@@ -1,23 +1,25 @@
 import React, { useContext } from 'react';
 import { GeneralContext } from '../App';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Nav = () => {
   const { dispatch } = useContext(GeneralContext);
+  const { user, loginWithRedirect, logout, isAuthenticated } = useAuth0();
 
   return (
     <nav>
       <div className='nav-wrapper'>
-        <a href='/' className='brand-logo' style={{ marginLeft: '1em' }}>
+        <a
+          href='/'
+          onClick={() => {
+            dispatch({ type: 'NO_TASK' });
+          }}
+          className='brand-logo'
+          style={{ marginLeft: '1em' }}
+        >
           Tomato
         </a>
         <ul id='nav-mobile' className='right hide-on-med-and-down'>
-          <li
-            onClick={() => {
-              dispatch({ type: 'NO_TASK' });
-            }}
-          >
-            <a href='#'>Index</a>
-          </li>
           <li>
             <a
               href='https://czarto.com/2012/04/24/four-quadrants-of-time/'
@@ -26,15 +28,23 @@ const Nav = () => {
               Inspired By
             </a>
           </li>
-          {/* <li>
-            <a
-              href='https://materializecss.com/getting-started.html'
-              target='_blank'
-              rel='noreferrer'
+          {isAuthenticated ? (
+            <li
+              onClick={() => {
+                logout();
+              }}
             >
-              Materialize
-            </a>
-          </li> */}
+              <a>Logout</a>
+            </li>
+          ) : (
+            <li
+              onClick={() => {
+                loginWithRedirect();
+              }}
+            >
+              <a>Login</a>
+            </li>
+          )}
         </ul>
       </div>
     </nav>
