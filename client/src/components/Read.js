@@ -58,9 +58,12 @@ const Read = () => {
         <Edit />
       ) : state.task ? (
         <div style={{ paddingInline: '1em' }}>
-          <div className='title5' style={{ textTransform: 'capitalize' }}>
+          <h5
+            className=''
+            style={{ textTransform: 'capitalize', paddingBottom: '1em' }}
+          >
             {title}
-          </div>
+          </h5>
           <div style={{ marginBlock: '1em' }}>
             <div
               style={{

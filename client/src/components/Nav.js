@@ -20,22 +20,17 @@ const Nav = () => {
           Tomato
         </a>
         <ul id='nav-mobile' className='right hide-on-med-and-down'>
-          <li>
-            <a
-              href='https://czarto.com/2012/04/24/four-quadrants-of-time/'
-              target='_blank'
-            >
-              Inspired By
-            </a>
-          </li>
           {isAuthenticated ? (
-            <li
-              onClick={() => {
-                logout();
-              }}
-            >
-              <a>Logout</a>
-            </li>
+            <>
+              <li>Welcome, {user.nickname}</li>
+              <li
+                onClick={() => {
+                  logout();
+                }}
+              >
+                <a>Logout</a>
+              </li>
+            </>
           ) : (
             <li
               onClick={() => {

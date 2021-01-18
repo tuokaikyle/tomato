@@ -42,8 +42,8 @@ const Welcome = () => {
         app. Materializecss is used for the User Interface part.
       </p>
       <p>
-        As you may have noticed, this app still has some bugs. I hope to improve
-        this app by adding the following features in the future:
+        I hope to improve this app by adding the following features in the
+        future:
       </p>
       <ul>
         <li>- Fully responsive and mobile-friendly</li>

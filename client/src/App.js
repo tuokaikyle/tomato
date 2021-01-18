@@ -20,7 +20,6 @@ function App() {
 
   const domain = process.env.REACT_APP_DOMAIN;
   const clientId = process.env.REACT_APP_CLIENT_ID;
-  console.log(process.env);
 
   const getAll = async () => {
     try {
